@@ -1,0 +1,18 @@
+<h2>Sign up</h2>
+<p>To to sign up please type in your email address, name and a password.</p>
+<form action="/signup" method="post" enctype="multipart/form-data">
+    <label for="uname">Email</label>
+    <input type="text" name="uname" id="uname" placeholder="Type your email address" value="<%= (typeof email != 'undefined') ? uname : '' %>">
+
+    <label for="name">Name</label>
+    <input type="text" name="name" id="name" placeholder="Type your name" value="<%= (typeof name != 'undefined') ? fullname : '' %>">
+
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password" placeholder="Type a password"  value="<%= (typeof passphrase != 'undefined') ? passphrase : '' %>">
+
+    <label for="confirmpassword">Confirm password</label>
+    <input type="password" name="confirmpassword" id="confirmpassword" placeholder="Confirm password">
+
+    <button type="submit">Sign up</button>
+    <p id="error"><%= (typeof errorMessage != 'undefined')  ? errorMessage : '' %></p>
+</form>

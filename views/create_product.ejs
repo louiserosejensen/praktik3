@@ -1,0 +1,31 @@
+<% include ./partials/header %>
+<section class="admin-products">
+    <h1>Create products</h1>
+    <form id="product_form" method="post" enctype="multipart/form-data" class="form-inline">
+        <div class="form-group">
+            <label for="product_name">Product name</label>
+            <input type="text" name="product_name" class="form-control" id="product_name">value="<%= 
+            (typeof(mainResults) != 'undefined' && typeof(mainResults.product_name) != 'undefined') ? mainResults.product_name : '' %>">
+            </div>
+       <div class="form-group"> 
+            <label for="product_price">Price</label>
+            <input type="price" name="product_price" class="form-control" id="product_price">value="<%= 
+            (typeof(mainResults) != 'undefined' && typeof(mainResults.product_price) != 'undefined') ? mainResults.product_price : '' %>">
+            </div>
+        <div class="form-group"> 
+            <label for="product_description">Product Description</label>
+            <textarea name="product_description" class="form-control" id="product_description"><%=
+                (typeof(mainResults) != 'undefined' && typeof(mainResults.product_description) != 'undefined') ? mainResults.product_description : ''
+            %></textarea>
+            </div>
+        <div class="form-group"> 
+            <label for="product_image">Image</label>
+            <input type="file" name="product_image" class="form-control" id="product_image">value="<%= 
+            (typeof(mainResults) != 'undefined' && typeof(mainResults.product_image) != 'undefined') ? mainResults.product_image : '' %>">
+            </div>
+        <div class="form-group">
+            <button type="submit">Upload</button>
+            </div>
+    </form>
+</section>
+<% include ./partials/footer %>
